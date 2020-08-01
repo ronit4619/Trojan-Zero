@@ -1,0 +1,79 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #2f3136;
+    background-image: url(uni.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.form-group {
+    display: none;
+}
+
+#next-button:disabled {
+    cursor: not-allowed;
+}
+
+.invalid {
+    border: 5px solid rgb(235, 55, 55) !important;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-container {
+    width: 500px;
+    position: absolute;
+    top: calc(40% - 300px);
+    left: calc(50% - 300px);
+    background-color: rgba(0, 0, 0, .8);
+    padding: 60px;
+    box-shadow: 2px 9px 9px #000000;
+    border-radius: 20px;
+    color: #f3f3f3;
+}
+
+#next-button {
+    width: 25%;
+}
+
+#next-button:hover {
+    color: gold
+}
+
+#back-button {
+    font-size: 40px;
+    display: inline-flexbox;
+    cursor: pointer;
+}
+
+#back-button:hover {
+    color: gold
+}
+
+.password-requirements {
+    color: blueviolet;
+    font-weight: bolder;
+}
+
+#homepage {
+    width: 25%;
+    background-color: green;
+    height: 33px;
+}
+
+#homepage:hover {
+    color: gold
+}
+
+#homepage:disabled {
+    cursor: not-allowed;
+}
