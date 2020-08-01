@@ -1,0 +1,5 @@
+Dark grey - #242423
+Light grey blue - #8D99AE
+White - #EDF2F4
+Light red - #EF233C
+Main red - #D90429
