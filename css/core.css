@@ -16,6 +16,18 @@ body {
     overflow-x: hidden;
 }
 
+.trojanZERO {
+    position: inherit;
+    height: 50px;
+    width: 210px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+header {
+    margin: 0px;
+}
 /* Core Text */
 h1, h2, h3, h4, h6 {
     font-family: 'Raleway', sans-serif;
