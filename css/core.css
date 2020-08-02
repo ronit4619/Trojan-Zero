@@ -2,6 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900&display=swap');
 
+:root {
+    --dark-grey: #242423;
+    --light-blue: #8D99AE;
+    --light: #EDF2F4;
+    --light-red: #EF233C;
+    --main-red: #D90429;
+}
+
 /* Setting header and body fonts to respective font family */
 body {
     font-family: 'Montserrat', sans-serif;
@@ -14,11 +22,12 @@ h1, h2, h3, h4, h6 {
 }
 
 a {
-    color: #FCA311;
+    color: var(--light-red);
 }
 
 a:hover, a:focus {
-    color: #bf7b0b;
+    color: var(--main-red);
+    text-decoration: none !important;
 }
 
 /* Core Navbar */
@@ -33,7 +42,6 @@ a:hover, a:focus {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 32px;
-    color: #FCA311;
 }
 
 .nav-item {
@@ -51,17 +59,41 @@ a:hover, a:focus {
 /* Core Button */
 .btn {
     font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+.btn-red {
+    border: 5px solid var(--main-red);
+    background-color: var(--main-red);
+    color: var(--light);
+}
+
+.btn-red:hover, .btn-red:focus {
+    background-color: var(--light);
+    color: var(--main-red);
 }
 
 /* Themes */
-.bg-blue {
-    background-color: #14213D;
-}
-
 .bg-black {
-    background-color: #010308;
+    background-color: var(--dark-grey);
 }
 
-.text-gold {
-    color: #FCA311;
+.bg-red {
+    background-color: var(--main-red);
+}
+
+.bg-white {
+    background-color: var(--light);
+}
+
+.text-black {
+    color: var(--dark-grey);
+}
+
+.text-red {
+    color: var(--main-red);
+}
+
+.text-white {
+    color: var(--light);
 }
