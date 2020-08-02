@@ -18,3 +18,6 @@ const auth = firebase.auth();
 function error(message){
     alert("Error: " + message);
 }
+
+// Global variable for current user
+var currentUser = {};
