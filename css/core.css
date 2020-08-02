@@ -63,14 +63,12 @@ a:hover, a:focus {
 }
 
 .btn-red {
-    border: 5px solid var(--main-red);
     background-color: var(--main-red);
     color: var(--light);
 }
 
 .btn-red:hover, .btn-red:focus {
-    background-color: var(--light);
-    color: var(--main-red);
+    background-color: var(--light-red);
 }
 
 /* Themes */
