@@ -1,30 +1,20 @@
-// User object
-function User(id, un, em, pw){
-    // Initial properties
-    this.UID = id;
-    this.userName = un;
-    this.email = em;
-    this.password = pw;
-    this.orders = "";
-}
+var firebaseConfig = {
+    apiKey: "AIzaSyAoy8MhhvkoyUvBc0lxtGXiumhPsxz6JpQ",
+    authDomain: "trojanzero-3ad7d.firebaseapp.com",
+    databaseURL: "https://trojanzero-3ad7d.firebaseio.com",
+    projectId: "trojanzero-3ad7d",
+    storageBucket: "trojanzero-3ad7d.appspot.com",
+    messagingSenderId: "451241857154",
+    appId: "1:451241857154:web:4288fb38e6a0bb7adca49b",
+    measurementId: "G-ZMRKBNWPYT"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
 
-// Product object
-function Product(id){
-    // Initial properties
-    this.PID = id;
-    this.name = "";
-    this.description = "";
-    this.category = "";
-    this.rating = 0;
-    this.sales = 0;
-}
+const db = firebase.database();
+const auth = firebase.auth();
 
-// Order object
-function Order(id){
-    // Initial properties
-    this.OID = id;
-    this.product = "";
-    this.date = "";
-    this.price = 0;
-    this.isComplete = false;
+function error(message){
+    alert("Error: " + message);
 }
