@@ -16,33 +16,10 @@ body {
     overflow-x: hidden;
 }
 
-.trojanZERO {
-    position: relative;
-    height: 50px;
-    width: 210px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
-.container-fluid {
-    background-color: #2B2D42;
-}
-
-.row {
-    padding-bottom: 30px;
-    padding-top: 30px;
-}
-
 /* Core Text */
 h1, h2, h3, h4, h6 {
     font-family: 'Raleway', sans-serif;
-    margin: 0;
-    color: #EF233C;
-}
-
-p {
-    color: aliceblue;
+    color: var(--light);
 }
 
 .footer-top {
@@ -60,21 +37,21 @@ a:hover, a:focus {
 
 /* Core Navbar */
 .navbar {
-    overflow: auto;
+    background-color: #010308;
+    color: #E0E0E0;
 }
 
 .navbar-brand {
-    margin: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 32px;
-    padding: 0;
+    color: #FCA311;
 }
 
 .nav-item {
     font-weight: 500;
-    padding-bottom: 50;
-    padding-left: 50px;
 }
 
 /* Responsive images */
