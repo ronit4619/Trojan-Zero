@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c3692fe-d296-4f12-a4d7-3fe62724353b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/img/._logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/core.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/core.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,10 +22,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
   <component name="TaskManager">
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="307" y="112" key="#CLI_Interpreters" timestamp="1596401303812">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="307" y="112" key="#CLI_Interpreters/0.0.1440.900@0.0.1440.900" timestamp="1596401303812" />
+    <state x="222" y="178" key="SettingsEditor" timestamp="1596401306732">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="222" y="178" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1596401306732" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1596400146093">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

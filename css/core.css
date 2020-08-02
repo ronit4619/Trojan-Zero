@@ -26,6 +26,11 @@ h1, h2, h3, h4, h6 {
     background: #2B2D42;
 }
 
+.row {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 a {
     color: var(--light-red);
 }
@@ -37,7 +42,7 @@ a:hover, a:focus {
 
 /* Core Navbar */
 .navbar {
-    background-color: #010308;
+    background-color: #2B2D42;
     color: #E0E0E0;
 }
 
