@@ -4,7 +4,7 @@
     <!-- SEO and Metadata-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Home - MUCCI</title>
+    <title>Cameras - PANEL - trojanZERO</title>
 
     <!-- Core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
