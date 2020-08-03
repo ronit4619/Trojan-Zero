@@ -1,5 +1,5 @@
 # ![trojanZERO Logo](img/logo.png)
-####_The hero your city needs and deserves._
+_The hero your city needs and deserves._
 
 ## Installation
 
