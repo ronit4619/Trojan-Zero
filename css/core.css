@@ -188,6 +188,10 @@ a:hover, a:focus {
     color: var(--main-red);
 }
 
+.text-light-red {
+    color: var(--light-red);
+}
+
 .text-white {
     color: var(--light);
 }
