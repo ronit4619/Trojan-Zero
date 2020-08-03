@@ -58,12 +58,17 @@ auth.onAuthStateChanged(function(user){
         if (window.location.pathname == "/trojan-zero/login.php") {
             window.location = "panel/";
         }
-        db.ref('group').once('value')
-            .then(function (snapshot) {
-                let invited_users = snapshot.val();
-                invited_users.push("user.uid");
-                console.log
-            });
+
+        if(window.location.pathname.includes("panel")){
+            db.ref('group').once('value')
+                .then(function (snapshot) {
+                    let invited_users = snapshot.val();
+                    if(!invited_users.includes(user.uid)){
+                        logout();
+                    }
+                });
+        }
+
     }
 
     // Not logged in
