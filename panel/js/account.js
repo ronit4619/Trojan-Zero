@@ -35,19 +35,24 @@ function changeUsername(){
     let newUsername = document.getElementById("username-new").value;
     let newUsernameConfirm = document.getElementById("username-new_confirm").value;
 
-    if(newUsername == newUsernameConfirm){
-        let user = auth.currentUser;
-        db.ref('users/' + user.uid + "/username").set(newUsername)
-            .then(function(){
-                if(!alert("Your username has been changed.")){
-                    window.location.reload();
-                }
-            })
-            .catch(function(error){
-               alert(error.message);
-            });
+    if(newUsername.length >= 6){
+        if(newUsername == newUsernameConfirm){
+            let user = auth.currentUser;
+            db.ref('users/' + user.uid + "/username").set(newUsername)
+                .then(function(){
+                    if(!alert("Your username has been changed.")){
+                        window.location.reload();
+                    }
+                })
+                .catch(function(error){
+                    alert(error.message);
+                });
+        }
+        else {
+            errorAlert("The new usernames did not match.");
+        }
     }
     else {
-        errorAlert("The new passwords did not match.");
+        errorAlert("The username is too short - it must be greater than 6 characters.")
     }
 }
