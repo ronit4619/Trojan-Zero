@@ -36,7 +36,7 @@
     <section id="header">
         <div class="container">
             <div class="main">
-                <h1 class="font-weight-bold mb-4 animate__animated animate__pulse animate__delay-1s">The Hero Your City Needs, and Deserves.</h1>
+                <h1 class="font-weight-bold mb-4 animate__animated animate__pulse animate__delay-1s">The Hero Your City Needs and Deserves.</h1>
                 <button class="btn btn-block btn-lg btn-red-outline mb-3" onclick="window.location = 'login.php'">Login</button>
                 <button class="btn btn-block btn-lg btn-white" onclick="window.location = 'register.php'">Register</button>
             </div>
