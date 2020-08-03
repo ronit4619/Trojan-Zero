@@ -64,9 +64,41 @@ readfile("../nav.html");
                     <div class="col-lg-6">
                         <div class="block">
                             <div class="title"><strong><i class="fas fa-video"></i> Camera 1</strong></div>
-                            <video width="400" height="200" autoplay="autoplay" loop>
-                                <source src="vid/cam1.mp4" type="video/mp4" />
-                            </video>
+                            <div class="text-center">
+                                <video width="300" autoplay="autoplay" loop muted>
+                                    <source src="vid/cam1.mp4" type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="block">
+                            <div class="title"><strong><i class="fas fa-video"></i> Camera 2</strong></div>
+                            <div class="text-center">
+                                <video width="440" autoplay="autoplay" loop muted>
+                                    <source src="vid/cam2.mp4" type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="block">
+                            <div class="title"><strong><i class="fas fa-video"></i> Camera 3</strong></div>
+                            <div class="text-center">
+                                <video width="440" autoplay="autoplay" loop muted>
+                                    <source src="vid/cam3.mp4" type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="block">
+                            <div class="title"><strong><i class="fas fa-video"></i> Camera 4</strong></div>
+                            <div class="text-center">
+                                <video width="440" autoplay="autoplay" loop muted>
+                                    <source src="vid/cam4.mp4" type="video/mp4" />
+                                </video>
+                            </div>
                         </div>
                     </div>
                 </div>

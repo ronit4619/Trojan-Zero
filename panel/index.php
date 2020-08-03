@@ -65,7 +65,7 @@ readfile("../nav.html");
                         <div class="block">
                             <div class="title"><strong><i class="fas fa-receipt"></i> Subscription</strong></div>
                             <div class="text">
-                                <h1 class="d-block dashtext-2" style="font-size: 102px">$80</h1>
+                                <h1 class="d-block text-light-red" style="font-size: 102px">$80</h1>
                                 <span class="d-block"><strong>Plan:</strong> City Coverage</span>
                             </div>
                         </div>
@@ -86,10 +86,15 @@ readfile("../nav.html");
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="line-chart block chart">
-                            <div class="title"><strong><i class="far fa-chart-bar"></i> Analytics</strong></div>
-                            <canvas id="homeAnalytics"></canvas>
-                            <button class="margin-top-sm btn btn-block btn-red" onclick="window.location = 'analytics.php'">View analytics</button>
+                        <div class="block">
+                            <div class="title"><strong><i class="fas fa-video"></i> Cameras</strong></div>
+                            <div class="text-center">
+                                <video id="cam-footage" width="375" autoplay="autoplay" loop muted>
+                                    <source src="vid/cam3.mp4" type="video/mp4" />
+                                </video>
+                                <p class="dashtext-3 font-italic" style="font-size: 12px;">Camera 3</p>
+                            </div>
+                            <button class="btn btn-block btn-red" onclick="window.location = 'cameras.php'">Monitor live cameras</button>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -102,7 +107,7 @@ readfile("../nav.html");
                     <div class="col-lg-6">
                         <div class="block">
                             <div class="title"><strong><i class="fas fa-users"></i> Users</strong></div>
-                            <p>Invite code:</p>
+                            <p style="font-size: 32px;">Invite code:</p>
                             <div class="form-inline margin-bottom-sm">
                                 <div class="form-group">
                                     <input id="invite-code" type="text" value="jZoZdFw5uRU5ThZD10V1DMcDWTD3" class="form-control mr-sm-3 custom-select-lg"readonly>
@@ -119,7 +124,7 @@ readfile("../nav.html");
                             <div class="title"><strong><i class="fas fa-cog"></i> My Account</strong></div>
                             <div class="avatar"><img src="img/user.png" alt="User" class="img-fluid"></div>
                             <div class="user-title text-center"><h3 id="account-username" class="h5 font-weight-bold text-purple"></h3><span id="account-email"></span></div>
-                            <button class="margin-top-sm btn btn-block btn-red" onclick="window.location = 'account.php'">Edit account</button>
+                            <button class="mt-3 btn btn-block btn-red" onclick="window.location = 'account.php'">Edit account</button>
                         </div>
                     </div>
                 </div>
