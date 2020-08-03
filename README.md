@@ -1,5 +1,5 @@
-# ![trojanZERO Logo](img/logo.png)
-_The hero your city needs and deserves._
+# ![trojanZERO](img/thumbnail.png)
+_**Created by:** Imesh Nimsitha, Arshvir Chaudary, Yash Patel, Ronit Ahuja_
 
 ## Installation
 
