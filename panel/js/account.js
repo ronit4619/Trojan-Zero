@@ -27,7 +27,7 @@ function changePass(){
         });
     }
     else {
-        error("The new passwords did not match.");
+        errorAlert("The new passwords did not match.");
     }
 }
 
@@ -48,6 +48,6 @@ function changeUsername(){
             });
     }
     else {
-        error("The new passwords did not match.");
+        errorAlert("The new passwords did not match.");
     }
 }

@@ -15,9 +15,6 @@ firebase.analytics();
 const db = firebase.database();
 const auth = firebase.auth();
 
-function error(message){
+function errorAlert(message){
     alert("Error: " + message);
 }
-
-// Global variable for current user
-var currentUser = {};

@@ -23,7 +23,6 @@
     <script src="../js/authentication.js"></script>
 
     <!-- Individual CSS and JS -->
-    <link rel="stylesheet" href="css/index.css">
 
 </head>
 
@@ -101,7 +100,6 @@ readfile("../nav.html");
 <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
 <script src="vendor/chart.js/Chart.min.js"></script>
 <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
-<script src="js/index.js"></script>
 
 <!-- Individual JS -->
 <script src="js/account.js"></script>

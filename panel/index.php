@@ -39,8 +39,7 @@
         readfile("sidebar.html");
         ?>
         <div class="page-content">
-
-            <section class="mt-3 no-padding-bottom">
+            <section class="no-padding-bottom">
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-md-3 col-sm-6">
