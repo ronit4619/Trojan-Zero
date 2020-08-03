@@ -8,6 +8,7 @@
     --light: #EDF2F4;
     --light-red: #EF233C;
     --main-red: #D90429;
+    --panel-grey: #8a8d93;
 }
 
 /* Setting header and body fonts to respective font family */
@@ -69,6 +70,15 @@ a:hover, a:focus {
     background-color: var(--light-red);
 }
 
+.btn-purple {
+    background-color: #7127AC;
+    color: var(--light);
+}
+
+.btn-purple:hover, .btn-purple:focus {
+    background-color: #864DD9;
+}
+
 /* Themes */
 .bg-black {
     background-color: var(--dark-grey);
@@ -92,6 +102,14 @@ a:hover, a:focus {
 
 .text-white {
     color: var(--light);
+}
+
+.text-grey {
+    color: var(--panel-grey);
+}
+
+.text-purple {
+    color: #864DD9;
 }
 
 
