@@ -25,6 +25,12 @@ auth.onAuthStateChanged(function(user){
         db.ref('users/' + user.uid).once('value')
             .then(function (snapshot) {
                 document.getElementById("panel-username").innerText = snapshot.val().username;
+                let admin = snapshot.val().admin;
+                if(!admin){
+                    document.getElementById("panel-role").innerText = "Guard";
+                    document.getElementById("sidebar-users").style.display = "none";
+                    document.getElementById("sidebar-analytics").style.display = "none";
+                }
             });
     }
 
