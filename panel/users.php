@@ -43,7 +43,7 @@ readfile("../nav.html");
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="block">
-                            <div class="title"><strong>Invite code</strong></div>
+                            <div class="title"><strong><i class="fas fa-link"></i> Invite code</strong></div>
                             <p>Provide this code to invite a user to your panel. They must input this code when registering.</p>
                             <div class="form-inline">
                                 <div class="form-group">
@@ -57,7 +57,7 @@ readfile("../nav.html");
                     </div>
                     <div class="col-lg-12">
                         <div class="block">
-                            <div class="title"><strong>Manage users</strong></div>
+                            <div class="title"><strong><i class="fas fa-users-cog"></i> Manage users</strong></div>
                             <!--<p id="no-invites">Looks like you have not invited any users! Invite them by providing the code above.</p>-->
                             <div class="table-responsive">
                                 <table id="t-users" class="table table-striped">

@@ -9,8 +9,8 @@
     <!-- Core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <link rel="stylesheet" href="../css/core.css">
     <link rel="stylesheet" href="css/panel.css">
+    <link rel="stylesheet" href="../css/core.css">
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
@@ -45,14 +45,14 @@ readfile("../nav.html");
                         <div class="user-block block text-center">
                             <div class="avatar"><img src="img/user.png" alt="User" class="img-fluid">
                             </div>
-                            <div class="user-title"><h3 id="account-username" class="h5 font-weight-bold"></h3><span id="account-email"></span></div>
+                            <div class="user-title"><h3 id="account-username" class="h5 font-weight-bold text-red"></h3><span id="account-email"></span></div>
                             <input type="button" class="btn btn-red user-role" value="Logout" onclick="logout();"/>
                         </div>
                     </div>
                     <!-- Inline Form-->
                     <div class="col-lg-12">
                         <div class="block">
-                            <div class="title"><strong>Change Username</strong></div>
+                            <div class="title"><strong><i class="fas fa-user-edit"></i> Change Username</strong></div>
                             <div class="block-body">
                                 <div class="form-inline">
                                     <div class="form-group">
@@ -71,7 +71,7 @@ readfile("../nav.html");
                     <!-- Inline Form-->
                     <div class="col-lg-12">
                         <div class="block">
-                            <div class="title"><strong>Change Password</strong></div>
+                            <div class="title"><strong><i class="fas fa-key"></i> Change Password</strong></div>
                             <div class="block-body">
                                 <div class="form-inline">
                                     <div class="form-group">
