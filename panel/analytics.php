@@ -9,8 +9,8 @@
     <!-- Core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <link rel="stylesheet" href="../css/core.css">
     <link rel="stylesheet" href="css/panel.css">
+    <link rel="stylesheet" href="../css/core.css">
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>

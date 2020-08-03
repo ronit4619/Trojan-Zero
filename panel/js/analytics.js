@@ -261,16 +261,16 @@ $(document).ready(function () {
                     data: [300, 50, 100, 80],
                     borderWidth: 0,
                     backgroundColor: [
-                        '#723ac3',
-                        "#864DD9",
-                        "#9762e6",
-                        "#a678eb"
+                        '#D90429',
+                        "#f51139",
+                        "#EF233C",
+                        "#f5495e"
                     ],
                     hoverBackgroundColor: [
-                        '#723ac3',
-                        "#864DD9",
-                        "#9762e6",
-                        "#a678eb"
+                        '#D90429',
+                        "#f51139",
+                        "#EF233C",
+                        "#f5495e"
                     ]
                 }]
         }
