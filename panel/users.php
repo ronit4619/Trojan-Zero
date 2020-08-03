@@ -66,10 +66,10 @@ readfile("../nav.html");
                             <p>Provide this code to invite a user to your panel. They must input this code when registering.</p>
                             <div class="form-inline">
                                 <div class="form-group">
-                                    <input id="invite-code" type="text" value="jZoZdFw5uRU5ThZD10V1DMcDWTD3" class="form-control mr-sm-3 custom-select-lg"readonly>
+                                    <input id="invite-code" type="text" value="jZoZdFw5uRU5ThZD10V1DMcDWTD3" class="form-control mr-sm-3 custom-select-lg" readonly/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="submit" value="Copy" class="btn btn-block btn-red btn-lg" onclick="copyInvite();">
+                                    <input type="submit" value="Copy" class="btn btn-block btn-red btn-lg" onclick="copyInvite();"/>
                                 </div>
                             </div>
                         </div>

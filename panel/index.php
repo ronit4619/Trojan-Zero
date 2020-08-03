@@ -75,11 +75,11 @@ readfile("../nav.html");
                             <div class="title"><strong><i class="fas fa-sticky-note"></i> Latest Patch Notes - v1.0.1</strong></div>
                             <div class="checklist">
                                 <div class="item d-flex align-items-center">
-                                    <input type="checkbox" id="input-1" name="input-1" class="checkbox-template">
+                                    <input type="checkbox" id="input-1" name="input-1" class="checkbox-template"/>
                                     <label for="input-1">Added new analytics modules.</label>
                                 </div>
                                 <div class="item d-flex align-items-center">
-                                    <input type="checkbox" id="input-2" name="input-2" checked class="checkbox-template">
+                                    <input type="checkbox" id="input-2" name="input-2" checked class="checkbox-template"/>
                                     <label for="input-2">Removed errors in automatic camera linking system.</label>
                                 </div>
                             </div>

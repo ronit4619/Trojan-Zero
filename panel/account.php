@@ -81,7 +81,7 @@ readfile("../nav.html");
                                         <input id="username-new_confirm" type="text" placeholder="Confirm New Username" class="mr-sm-3 form-control" required/>
                                     </div>
                                     <div class="form-group">
-                                        <input type="submit" value="Change" class="btn btn-block btn-red" onclick="changeUsername()">
+                                        <input type="submit" value="Change" class="btn btn-block btn-red" onclick="changeUsername()"/>
                                     </div>
                                 </div>
                             </div>
@@ -100,7 +100,7 @@ readfile("../nav.html");
                                         <input id="password-new_confirm" type="password" placeholder="Confirm New Password" class="mr-sm-3 form-control" required/>
                                     </div>
                                     <div class="form-group">
-                                        <input type="submit" value="Change" class="btn btn-block btn-red" onclick="changePass()">
+                                        <input type="submit" value="Change" class="btn btn-block btn-red" onclick="changePass()"/>
                                     </div>
                                 </div>
                             </div>
