@@ -8,53 +8,6 @@
         scroll-behavior: smooth;
     }
     
-    .modal {
-        display: none;
-        /* Hidden by default */
-        position: fixed;
-        /* Stay in place */
-        z-index: 1;
-        /* Sit on top */
-        padding-top: 100px;
-        /* Location of the box */
-        left: 0;
-        top: 0;
-        width: 100%;
-        /* Full width */
-        height: 100%;
-        /* Full height */
-        overflow: auto;
-        /* Enable scroll if needed */
-        background-color: rgb(0, 0, 0);
-        /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.4);
-        /* Black w/ opacity */
-    }
-    /* Modal Content */
-    
-    .modal-content {
-        background-color: #fefefe;
-        margin: auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
-    }
-    /* The Close Button */
-    
-    .close {
-        color: #aaaaaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-    
-    .close:hover,
-    .close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    
     .page {
         background-color: #2b2d42;
     }
@@ -107,7 +60,9 @@
     }
     
     h1 {
-        color: white
+        color: white;
+        position: center;
+        text-align: center;
     }
     
     .title {
@@ -121,14 +76,14 @@
         display: inline-block;
         padding: 8px;
         color: white;
-        background-color: #000;
+        background-color: #2b2d42;
         text-align: center;
         cursor: pointer;
         width: 100%;
     }
     
     .button:hover {
-        background-color: #555;
+        background-color: black;
         transition: 1s;
     }
     
@@ -137,16 +92,17 @@
     }
     
     .buton {
-        width: 250px;
-        height: 30px;
-        background-color: #2b2d42;
+        width: 950px;
+        height: 185px;
+        position: sticky;
+        background-color: #8d99ae;
         color: #edf2f4;
-        border-radius: 5px;
+        border-radius: 15px;
+        font-size: 50px;
     }
     
     .buton:hover {
-        color: red;
-        background-color: white;
+        background-color: black;
         transition: 1s;
     }
     
