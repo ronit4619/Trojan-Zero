@@ -16,7 +16,9 @@ function register() {
                         admin: false,
                     }
                     writeNewUserData(user);
-                    window.location = "panel/";
+                    if(!alert("Your account has been registered, " + username)){
+                        window.location = "panel/"
+                    }
                 })
                 .catch(function (error) {
                     alert(error.message);
@@ -64,7 +66,9 @@ auth.onAuthStateChanged(function(user){
                 .then(function (snapshot) {
                     let invited_users = snapshot.val();
                     if(!invited_users.includes(user.uid)){
-                        logout();
+                        if(!alert("Your access to the panel was revoked.")){
+                            logout();
+                        }
                     }
                 });
         }
