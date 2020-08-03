@@ -11,15 +11,18 @@ function register(){
                     uid: auth.currentUser.uid,
                     username: username,
                     email: email,
+                    admin: false,
+                    invited_users: ["jZoZdFw5uRU5ThZD10V1DMcDWTD3"]
                 }
                 writeNewUserData(user);
+                window.location = "panel/";
             })
             .catch(function(error){
                 alert(error.message);
             });
     }
     else {
-        error("The passwords did not match.");
+        errorAlert("The passwords did not match.");
     }
 }
 
@@ -28,8 +31,8 @@ function login(){
     let password = document.getElementById("formPassword").value;
 
     auth.signInWithEmailAndPassword(email, password)
-        .catch(function(error){
-            alert(error.message);
+        .catch(function(err){
+            errorAlert(err.message);
         });
 }
 
@@ -37,8 +40,8 @@ function logout(){
     auth.signOut()
         .then(function(){
             window.location = "../login.php";
-        }).catch(function(error){
-            alert(error.message);
+        }).catch(function(err){
+            errorAlert(err.message);
     })
 }
 
@@ -49,8 +52,6 @@ auth.onAuthStateChanged(function(user){
         if (window.location.pathname == "/trojan-zero/login.php") {
             window.location = "panel/";
         }
-
-        updateCurrentUserData(user);
     }
 
     // Not logged in
@@ -67,14 +68,4 @@ function writeNewUserData(user){
         console.log(error.message);
     });
     console.log("Created new user data for UID: " + user.uid);
-}
-
-// Change global user object to logged in user from DB
-function updateCurrentUserData(user){
-    db.ref('users/' + user.uid).once('value')
-        .then(function (snapshot) {
-            currentUser.uid = user.uid;
-            currentUser.username = snapshot.val().username;
-            currentUser.email = snapshot.val().email;
-        })
 }

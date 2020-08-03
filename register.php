@@ -39,7 +39,7 @@ readfile("nav.html");
         <h3 class="mb-3 font-weight-bold text-white text-center">Let's get started.</h3>
 
         <div class="form-label-group">
-            <input type="text" name="formInvite" id="formInvite" class="form-control" placeholder="Invite Code" required autofocus />
+            <input type="text" name="formInvite" id="formInvite" class="form-control" placeholder="Invite Code" autofocus />
         </div>
 
         <hr style="border-color: white">
