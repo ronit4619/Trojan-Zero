@@ -1,7 +1,7 @@
   html {
       margin: 0;
       padding: 0;
-      background-color: #2f3136;
+      background-color: #2b2d42;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       -webkit-background-size: cover;
       background-size: cover;
@@ -33,15 +33,15 @@
   }
   
   .nav li a {
-      color: #1b86c4;
+      color: #ef233c;
       text-decoration: none;
       padding: 5px 20px;
       font-size: 15px;
   }
   
   .nav li a:hover {
-      background: #fff;
-      color: #1b86c4;
+      background: #edf2f4;
+      color: #ef233c;
       transition: 0.7s;
   }
   
@@ -64,25 +64,25 @@
   .text h1 {
       font-style: italic;
       text-align: center;
-      color: #fff;
+      color: #edf2f4;
       text-transform: uppercase;
       font-size: 33px;
       padding: 10px 10px;
   }
   
   .text a {
-      border: 3px solid #fff;
+      border: 3px solid #edf2f4;
       padding: 15px 75px;
       text-decoration: none;
       text-transform: uppercase;
       font: size 12px;
       margin-top: 20px;
       display: inline-block;
-      color: #1b86c4;
+      color: #8d99ae;
   }
   
   .text a:hover {
-      background: #fff;
-      color: #1b86c4;
+      background: #edf2f4;
+      color: #ef233c;
       transition: 1s;
   }
