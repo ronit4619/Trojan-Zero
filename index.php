@@ -37,8 +37,8 @@
         <div class="container">
             <div class="main">
                 <h1 class="font-weight-bold mb-4 animate__animated animate__pulse animate__delay-1s">The Hero Your City Needs, and Deserves.</h1>
-                <button class="btn btn-block btn-lg btn-red-outline" onclick="window.location = 'login.php'">Login</button>
-                <button class="btn btn-block btn-lg btn-red-outline" onclick="window.location = 'register.php'">Register</button>
+                <button class="btn btn-block btn-lg btn-red-outline mb-3" onclick="window.location = 'login.php'">Login</button>
+                <button class="btn btn-block btn-lg btn-white" onclick="window.location = 'register.php'">Register</button>
             </div>
         </div>
     </section>
@@ -65,7 +65,7 @@
             <h1 class="font-weight-bold text-white mb-4"><i class="fas fa-users"></i> Our Team</h1>
             <div class="row">
                 <div class="col-lg-3">
-                    <div class="team-member mx-auto mb-5 mb-lg-0 wow animate__animated animate__bounceIn animate__delay-1s">
+                    <div class="team-member mx-auto mb-5 mb-lg-0 wow animate__animated animate__bounceIn">
                         <img class="img-fluid rounded-circle mb-3" src="img/imesh.jpg" alt="">
                         <h5>Imesh Nimsitha</h5>
                         <h6>- CEO -</h6>
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="team-member mx-auto mb-5 mb-lg-0 wow animate__animated animate__bounceIn animate__delay-1s">
+                    <div class="team-member mx-auto mb-5 mb-lg-0 wow animate__animated animate__bounceIn">
                         <img class="img-fluid rounded-circle mb-3" src="img/yash.jpg" alt="">
                         <h5>Yash Patel</h5>
                         <h6>- Manufacturing Manager -</h6>
@@ -81,7 +81,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="team-member mx-auto mb-5 mb-lg-0 wow animate__animated animate__bounceIn animate__delay-1s">
+                    <div class="team-member mx-auto mb-5 mb-lg-0 wow animate__animated animate__bounceIn">
                         <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
                         <h5>Arshvir Chaudary</h5>
                         <h6>- Installation Manager -</h6>
@@ -89,7 +89,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="team-member mx-auto mb-5 mb-lg-0 wow animate__animated animate__bounceIn animate__delay-1s">
+                    <div class="team-member mx-auto mb-5 mb-lg-0 wow animate__animated animate__bounceIn">
                         <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
                         <h5>Ronit Ahuja</h5>
                         <h6>- Director of Finance -</h6>
