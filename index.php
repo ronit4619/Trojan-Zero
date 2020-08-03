@@ -82,7 +82,7 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="team-member mx-auto mb-5 mb-lg-0 wow animate__animated animate__bounceIn">
-                        <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
+                        <img class="img-fluid rounded-circle mb-3" src="img/arsh.jpg" alt="">
                         <h5>Arshvir Chaudary</h5>
                         <h6>- Installation Manager -</h6>
                         <p class="font-weight-light mb-0">Responsible for all installations of trojanZERO Thermal Camera Systems, he decides on the best ways to implement the thermal surveillance system in each town and city.</p>
@@ -90,7 +90,7 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="team-member mx-auto mb-5 mb-lg-0 wow animate__animated animate__bounceIn">
-                        <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
+                        <img class="img-fluid rounded-circle mb-3" src="img/ronit.jpg" alt="">
                         <h5>Ronit Ahuja</h5>
                         <h6>- Director of Finance -</h6>
                         <p class="font-weight-light mb-0">Managing every financial aspect of the company. he collects all payments and handles future investment to set trojanZERO up for continued future success.</p>
