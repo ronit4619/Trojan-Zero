@@ -2,6 +2,7 @@
       margin: 0;
       padding: 0;
       background-color: #2b2d42;
+      background-image: url(../img/hbg.jpg);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       -webkit-background-size: cover;
       background-size: cover;
@@ -57,7 +58,8 @@
       height: 300px;
       margin: 20% 30%;
       text-align: center;
-      background-color: rgba(0, 0, 0, .8);
+      background-color: #fff;
+      background-color: rgba(17, 32, 63, 0.8);
       border-radius: 10px;
   }
   
@@ -78,7 +80,7 @@
       font: size 12px;
       margin-top: 20px;
       display: inline-block;
-      color: #8d99ae;
+      color: #fff;
   }
   
   .text a:hover {
