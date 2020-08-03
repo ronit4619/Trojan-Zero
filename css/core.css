@@ -17,7 +17,8 @@ footer p {
     --light: #EDF2F4;
     --light-red: #EF233C;
     --main-red: #D90429;
-    --panel-grey: #8a8d93;
+    --panel-light-grey: #8a8d93;
+    --panel-grey: #2d3035;
 }
 
 /* Setting header and body fonts to respective font family */
@@ -60,7 +61,7 @@ a:hover, a:focus {
 .img-responsive {
     height: auto;
     width: auto;
-    max-height: 72px;
+    max-height: 100px;
     max-width: 250px;
 }
 
@@ -179,7 +180,7 @@ a:hover, a:focus {
 }
 
 .text-grey {
-    color: var(--panel-grey);
+    color: var(--panel-light-grey);
 }
 
 .text-purple {
