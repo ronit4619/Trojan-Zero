@@ -1,5 +1,11 @@
 body {
-    background-color: var(--dark-grey);
+    background-image: url('../img/bg.png');
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .navbar {
