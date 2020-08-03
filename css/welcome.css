@@ -1,145 +1,168 @@
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-    }
-    
-    html {
-        box-sizing: border-box;
-        scroll-behavior: smooth;
-    }
-    
-    .page {
-        background-color: #2b2d42;
-    }
-    
-    .logo img {
-        width: 400px;
-        float: center;
-        height: auto;
-    }
-    
-    .column {
-        float: left;
-        width: 33.3%;
-        margin-bottom: 16px;
-        padding: 10 8px;
-    }
-    
-    .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        margin: 8px;
-        background-color: #8d99ae;
-        padding: 3%;
-        border-radius: 15px;
-    }
-    
-    .about-section {
-        padding: 50px;
-        text-align: center;
-        background-color: #ef233c;
-        color: #edf2f4;
-    }
-    
-    .container {
-        padding: 2px 16px;
-    }
-    
-    .form-control {
-        width: 500px;
-    }
-    
-    .subhead {
-        padding: 25px;
-    }
-    
-    .container::after,
-    .row::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-    
-    h1 {
-        color: white;
-        position: center;
-        text-align: center;
-    }
-    
-    .title {
-        color: #edf2f4;
-        font-size: 20px;
-    }
-    
-    .button {
-        border: none;
-        outline: 0;
-        display: inline-block;
-        padding: 8px;
-        color: white;
-        background-color: #2b2d42;
-        text-align: center;
-        cursor: pointer;
-        width: 100%;
-    }
-    
-    .button:hover {
-        background-color: black;
-        transition: 1s;
-    }
-    
-    p {
-        color: white;
-    }
-    
-    .buton {
-        width: 950px;
-        height: 185px;
-        position: sticky;
-        background-color: #8d99ae;
-        color: #edf2f4;
-        border-radius: 15px;
-        font-size: 50px;
-    }
-    
-    .buton:hover {
-        background-color: black;
-        transition: 1s;
-    }
-    
-    .pop-content {
-        background-color: #2b2d42;
-        color: #edf2f4;
-        margin: auto;
-        padding: 25px;
-        border: 3px solid #8d99ae;
-        width: 80%;
-        font-size: 24px;
-    }
-    
-    .exit {
-        color: #d31b1b;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-        transition: 1s;
-    }
-    
-    .pop {
-        display: none;
-        position: fixed;
-        padding-top: 100px;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: #2b2d42;
-        background-color: rgba(0, 0, 0, 0.4);
-    }
-    
-    .exit:hover {
-        color: rgb(129, 40, 40);
-        text-decoration: none;
-        cursor: pointer;
-        transition: 1s;
-    }
+                                                body {
+                                                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                                    margin: 0;
+                                                }
+                                                
+                                                html {
+                                                    box-sizing: border-box;
+                                                    scroll-behavior: smooth;
+                                                }
+                                                
+                                                .page {
+                                                    background-color: #2b2d42;
+                                                }
+                                                
+                                                .logo img {
+                                                    width: 400px;
+                                                    float: center;
+                                                    height: auto;
+                                                }
+                                                
+                                                .column {
+                                                    float: left;
+                                                    width: 33.3%;
+                                                    margin-bottom: 16px;
+                                                    padding: 10 8px;
+                                                }
+                                                
+                                                .card {
+                                                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                                                    margin: 8px;
+                                                    background-color: #8d99ae;
+                                                    padding: 3%;
+                                                    border-radius: 15px;
+                                                }
+                                                
+                                                .about-section {
+                                                    padding: 50px;
+                                                    text-align: center;
+                                                    background-color: #ef233c;
+                                                    color: #edf2f4;
+                                                }
+                                                
+                                                .container {
+                                                    padding: 2px 16px;
+                                                }
+                                                
+                                                .form-control {
+                                                    width: 500px;
+                                                }
+                                                
+                                                .subhead {
+                                                    padding: 25px;
+                                                }
+                                                
+                                                .container::after,
+                                                .row::after {
+                                                    content: "";
+                                                    clear: both;
+                                                    display: table;
+                                                }
+                                                
+                                                h1 {
+                                                    color: white;
+                                                    position: center;
+                                                    text-align: center;
+                                                }
+                                                
+                                                .title {
+                                                    color: #edf2f4;
+                                                    font-size: 20px;
+                                                }
+                                                
+                                                .button {
+                                                    border: none;
+                                                    outline: 0;
+                                                    display: inline-block;
+                                                    padding: 8px;
+                                                    color: white;
+                                                    background-color: #2b2d42;
+                                                    text-align: center;
+                                                    cursor: pointer;
+                                                    width: 100%;
+                                                }
+                                                
+                                                .button:hover {
+                                                    background-color: black;
+                                                    transition: 1s;
+                                                }
+                                                
+                                                p {
+                                                    color: white;
+                                                }
+                                                
+                                                .buton {
+                                                    width: 950px;
+                                                    height: 185px;
+                                                    position: sticky;
+                                                    background-color: #8d99ae;
+                                                    color: #edf2f4;
+                                                    border-radius: 15px;
+                                                    font-size: 50px;
+                                                }
+                                                
+                                                .buton:hover {
+                                                    background-color: black;
+                                                    transition: 1s;
+                                                }
+                                                
+                                                .pop-content {
+                                                    background-color: #2b2d42;
+                                                    color: #edf2f4;
+                                                    margin: auto;
+                                                    padding: 25px;
+                                                    border: 3px solid #8d99ae;
+                                                    width: 80%;
+                                                    font-size: 24px;
+                                                }
+                                                
+                                                .exit {
+                                                    color: #d31b1b;
+                                                    float: right;
+                                                    font-size: 28px;
+                                                    font-weight: bold;
+                                                    transition: 1s;
+                                                }
+                                                
+                                                .pop {
+                                                    display: none;
+                                                    position: fixed;
+                                                    padding-top: 100px;
+                                                    left: 0;
+                                                    top: 0;
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    overflow: auto;
+                                                    background-color: #2b2d42;
+                                                    background-color: rgba(0, 0, 0, 0.4);
+                                                }
+                                                
+                                                .exit:hover {
+                                                    color: rgb(129, 40, 40);
+                                                    text-decoration: none;
+                                                    cursor: pointer;
+                                                    transition: 1s;
+                                                }
+                                                
+                                                .nav {
+                                                    float: right;
+                                                    list-style: none;
+                                                    margin-top: 30px;
+                                                }
+                                                
+                                                .nav li {
+                                                    display: block;
+                                                }
+                                                
+                                                .nav li a {
+                                                    color: #ffffff;
+                                                    text-decoration: none;
+                                                    padding: 5px 20px;
+                                                    font-size: 17px;
+                                                }
+                                                
+                                                .nav li a:hover {
+                                                    background: #edf2f4;
+                                                    color: #346e96;
+                                                    transition: 0.7s;
+                                                }
