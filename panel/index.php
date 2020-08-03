@@ -45,7 +45,9 @@ readfile("../nav.html");
                     <div class="col-lg-4">
                         <div class="block">
                             <div class="title"><strong><i class="fas fa-receipt"></i> Subscription</strong></div>
-                            <div class="text"><h1 class="d-block dashtext-2" style="font-size: 102px">$80</h1><span class="d-block"><strong>Plan:</strong> City Coverage</span>
+                            <div class="text">
+                                <h1 class="d-block dashtext-2" style="font-size: 102px">$80</h1>
+                                <span class="d-block"><strong>Plan:</strong> City Coverage</span>
                             </div>
                         </div>
                     </div>
