@@ -17,17 +17,21 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <!-- Link: Home -->
+
                 <li class="nav-item">
                     <a id="navHome" class="nav-link" href="index.php">Home</a>
                 </li>
-                <!-- Link: Browse -->
+
                 <li class="nav-item">
-                    <a id="navPanel" class="nav-link" href="panel/">Panel</a>
+                    <a id="navAbout" class="nav-link" href="index.php#about">About</a>
                 </li>
-                <!-- Link: Contact -->
+
                 <li class="nav-item">
-                    <a id="navContact" class="nav-link" href="contact.php">Contact</a>
+                    <a id="navTeam" class="nav-link" href="index.php#team">Team</a>
+                </li>
+
+                <li class="nav-item">
+                    <a id="navPricing" class="nav-link" href="index.php#pricing">Pricing</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -57,8 +61,9 @@
         document.getElementById("nav-logo").src = "../img/logo.png";
 
         document.getElementById("navHome").href = "../index.php";
-        document.getElementById("navPanel").href = "";
-        document.getElementById("navContact").href = "../contact.php";
+        document.getElementById("navAbout").href = "../index.php#about";
+        document.getElementById("navTeam").href = "../index.php#team";
+        document.getElementById("navPricing").href = "../index.php#pricing";
 
         document.getElementById("dropdown-panel").href = "../panel/";
         document.getElementById("dropdown-myaccount").href = "../panel/account.php";
