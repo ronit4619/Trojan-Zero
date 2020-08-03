@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="css/core.css">
-    <link rel="shortcut icon" type="image/png" href="img/logo.png">
     <title>trojanZERO</title>
 </head>
 
@@ -11,7 +9,7 @@
     <!-- ELEMENT: Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark ">
         <!-- Brand name -->
-        <a class="navbar-brand mr-auto" href="index.php"><img src="img/logo.png" alt="trojanZero" class="img-responsive"></a>
+        <a class="navbar-brand mr-auto" href="index.php"><img id="nav-logo" src="img/logo.png" class="img-responsive"></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,7 +23,7 @@
                 </li>
                 <!-- Link: Browse -->
                 <li class="nav-item">
-                    <a class="nav-link" href="listings.php">Browse</a>
+                    <a class="nav-link" href="panel/">Panel</a>
                 </li>
                 <!-- Link: Sell -->
                 <li class="nav-item">
@@ -44,19 +42,26 @@
                             <i style="font-size: 28px; color: white;" class="fas fa-user-circle"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropUser">
-                            <a class="dropdown-item" href="login.php">Login</a>
-                            <a class="dropdown-item" href="register.php">Register</a>
+                            <a id="dropdown-panel" class="dropdown-item" href="panel/">Visit Panel</a>
+                            <a id="dropdown-myaccount" class="dropdown-item" href="panel/account.php">My Account</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="account.php">My Account</a>
+                            <a class="dropdown-item" href="" onclick="logout();">Logout</a>
                         </div>
                     </li>
                 </ul>
-                <!--
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-                -->
             </form>
         </div>
     </nav>
 </body>
+
+<script>
+    let navpath = window.location.pathname;
+    if(navpath.includes("panel")){
+        document.getElementById("nav-logo").src = "../img/logo.png";
+        document.getElementById("dropdown-panel").href = "../panel/";
+        document.getElementById("dropdown-myaccount").href = "../panel/account.php";
+    }
+
+</script>
+
 </html>

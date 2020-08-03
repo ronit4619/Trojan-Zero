@@ -33,12 +33,21 @@ function login(){
         });
 }
 
+function logout(){
+    auth.signOut()
+        .then(function(){
+            window.location = "../login.php";
+        }).catch(function(error){
+            alert(error.message);
+    })
+}
+
 auth.onAuthStateChanged(function(user){
     // Logged in
     if(user) {
         // Current user is trying to access login page --> Redirect
         if (window.location.pathname == "/trojan-zero/login.php") {
-            window.location = "index.php";
+            window.location = "panel/";
         }
 
         updateCurrentUserData(user);
@@ -47,8 +56,8 @@ auth.onAuthStateChanged(function(user){
     // Not logged in
     else {
         // Anonymous trying to access account page --> Redirect
-        if(window.location.pathname == "/trojan-zero/account.php"){
-            window.location = "login.php";
+        if(window.location.pathname.includes("panel")){
+            window.location = "../login.php";
         }
    }
 });
@@ -64,10 +73,8 @@ function writeNewUserData(user){
 function updateCurrentUserData(user){
     db.ref('users/' + user.uid).once('value')
         .then(function (snapshot) {
-            currentUser = {
-                uid: user.uid,
-                username: snapshot.val().username,
-                email: snapshot.val().email
-            }
+            currentUser.uid = user.uid;
+            currentUser.username = snapshot.val().username;
+            currentUser.email = snapshot.val().email;
         })
 }
