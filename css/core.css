@@ -2,12 +2,23 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900&display=swap');
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+footer p {
+    font-size: 14px;
+}
+
 :root {
     --dark-grey: #242423;
     --light-blue: #8D99AE;
     --light: #EDF2F4;
     --light-red: #EF233C;
     --main-red: #D90429;
+    --panel-light-grey: #8a8d93;
+    --panel-grey: #2d3035;
 }
 
 /* Setting header and body fonts to respective font family */
@@ -50,7 +61,7 @@ a:hover, a:focus {
 .img-responsive {
     height: auto;
     width: auto;
-    max-height: 72px;
+    max-height: 100px;
     max-width: 250px;
 }
 
@@ -67,6 +78,93 @@ a:hover, a:focus {
 
 .btn-red:hover, .btn-red:focus {
     background-color: var(--light-red);
+}
+
+.btn-red-outline {
+    background-color: transparent;
+    color: var(--light);
+    border: 5px solid var(--light);
+}
+
+.btn-red-outline:hover, .btn-red-outline:focus {
+    background-color: var(--light);
+    color: var(--main-red);
+}
+
+.btn-white {
+    background-color: var(--light);
+    color: var(--main-red);
+    border: 5px solid var(--light);
+}
+
+.btn-white:hover, .btn-white:focus {
+    background-color: transparent;
+    color: var(--light);
+    border: 5px solid var(--light);
+}
+
+
+.btn-purple {
+    background-color: #7127AC;
+    color: var(--light);
+}
+
+.btn-purple:hover, .btn-purple:focus {
+    background-color: #864DD9;
+}
+
+.btn.btn-social-icon {
+    width: 50px;
+    height: 50px;
+    padding: 0
+}
+
+.btn.btn-rounded {
+    border-radius: 50px;
+}
+
+.btn-facebook {
+    background: #3b579d;
+    color: #ffffff
+}
+
+.btn-youtube {
+    background: #e52d27;
+    color: #ffffff
+}
+
+.btn-twitter {
+    background: #2caae1;
+    color: #ffffff
+}
+
+.btn-instagram {
+    background: #dc4a38;
+    color: #ffffff
+}
+
+.btn-facebook:hover,
+.btn-facebook:focus {
+    background: #2d4278;
+    color: #ffffff
+}
+
+.btn-youtube:hover,
+.btn-youtube:focus {
+    background: #c21d17;
+    color: #ffffff
+}
+
+.btn-twitter:hover,
+.btn-twitter:focus {
+    background: #1b8dbf;
+    color: #ffffff
+}
+
+.btn-instagram:hover,
+.btn-instagram:focus {
+    background: #bf3322;
+    color: #ffffff
 }
 
 /* Themes */
@@ -92,6 +190,14 @@ a:hover, a:focus {
 
 .text-white {
     color: var(--light);
+}
+
+.text-grey {
+    color: var(--panel-light-grey);
+}
+
+.text-purple {
+    color: #864DD9;
 }
 
 

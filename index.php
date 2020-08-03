@@ -1,131 +1,3 @@
-<?php
-include "php/db.php";
-
-$conn = db();
-
-// Grabbing all products from database
-$sqlP = "SELECT * FROM products";
-$resultP = $conn->query($sqlP) or die($conn->error);
-
-// Products array (indexed) --> contains every singular product array
-$products = array();
-// Fetching the associative array for each row in the table
-while ($row = $resultP->fetch_assoc()){
-    // Product array (associative) --> contains product information
-    $prod = array();
-    // Setting each key with the retrieved value
-    foreach ($row as $key => $value){
-        // Cast integer values
-        if($key == "id" || $key == "rating" || $key == "sales"){
-            $value = (int) $value;
-        }
-        $prod[$key] = $value;
-    }
-    // Adding the new product array to the total products array
-    array_push($products, $prod);
-}
-// Log the total products array (for testing)
-clog($products);
-
-// FUNCTION: Sort the products by a numerical property (descending order --> 5 to 1 star)
-function numsort_products(&$arr, $sort_param){
-    // Temporary variables for looping
-    $arr_prods = $arr;
-    $arr_rem = $arr_prods;
-    $arr_property = array();
-
-    // Copying every product property to the properties array (which is to be sorted)
-    for($i = 0; $i < count($arr_prods); $i++){
-        $prod = $arr_prods[$i];
-        $property = $prod[$sort_param];
-        array_push($arr_property, $property);
-    }
-    // Quicksort the ratings array in ascending order
-    quicksort($arr_property, 0, count($arr_property) - 1);
-    // Loop through the sorted ratings
-    $arr_prods = array();
-    for($j = 0; $j < count($arr_property); $j++){
-        $property = $arr_property[$j];
-        // Loop through every product that hasn't been matched with the sorted property
-        for($k = 0; $k < count($arr_rem); $k++){
-            $prod_compare = $arr_rem[$k];
-            $property_compare = $prod_compare[$sort_param];
-            // If the rating of the product from the original array matches the sorted array's property
-            if($property_compare == $property){
-                // Add the matched product to the total products array (in order of the sort)
-                array_push($arr_prods, $prod_compare);
-                // Remove the matched product from the loop array to prevent duplications
-                array_splice($arr_rem, $k, 1);
-            }
-        }
-    }
-    // Reverse the array so that it's in descending order (the quicksort was done in ascending order)
-    $arr_descend = array_reverse($arr_prods);
-    return $arr_descend;
-}
-
-function compareByName($a, $b) {
-    return strcmp($a["title"], $b["title"]);
-}
-
-function sort_products(&$arr, $type){
-    // A -> Z
-    if ($type == "A -> Z"){
-        $temp = $arr;
-        usort($temp, 'compareByName');
-        return $temp;
-    }
-    elseif($type == "Price"){
-        return numsort_products($arr, "price");
-    }
-    // Highest -> Lowest (rating)
-    elseif($type == "Rating"){
-        return numsort_products($arr, "rating");
-    }
-    // Highest -> Lowest (sales)
-    elseif($type == "Trending"){
-        return numsort_products($arr, "sales");
-    }
-    // Latest
-    else {
-        return array_reverse($arr);
-    }
-}
-
-$products_rating = numsort_products($products, "rating");
-$products_sales = numsort_products($products, "sales");
-
-$prod_rating = $products_rating[0];
-$prod_sales = $products_sales[0];
-$prod_latest = $products[count($products)-1];
-
-echo "<script>\n";
-echo "let rated = " . json_encode($prod_rating, JSON_PRETTY_PRINT) . ";";
-echo "let trending = " . json_encode($prod_sales, JSON_PRETTY_PRINT) . ";";
-echo "let latest = " . json_encode($prod_latest, JSON_PRETTY_PRINT) . ";";
-echo "\n</script>";
-
-if (isset($_POST["searchform"])) {
-    $searchform = $_POST["searchform"];
-}
-
-else {
-    $searchform = null;
-}
-
-//Check if the form is empty
-if(empty($searchform) ) {
-
-}
-
-else {
-    echo "<script>\n";
-    echo "window.location = 'listings.php'";
-    echo "\n</script>";
-}
-
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -133,12 +5,12 @@ else {
     <!-- SEO and Metadata-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" type="image/png" href="img/logo-sm.png">
     <title>trojanZERO</title>
 
     <!-- Core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
     <link rel="stylesheet" href="css/core.css">
 
     <!-- Firebase -->
@@ -154,55 +26,140 @@ else {
     <link rel="stylesheet" href="css/index.css">
 </head>
 
-<body class="back" onload="update();">
+<body>
 
     <!-- Insert NAVBAR template -->
     <?php
     readfile("nav.html");
     ?>
 
-    <div class="container" style="padding-top: 175px; padding-bottom: 175px;">
-        <div class="row">
-            <div class="col-lg-12">
-                <form class="form-inline bg-search mb-2" id="searchform" action="" method="post">
-                    <input id="searchbar" type="search" placeholder="ENTER ITEM TO SEARCH" aria-label="Search" class="bg-search" name="searchform">
-                    <button class="btn bg-search text-light" type="submit" id="searchbtn"><i class="fas fa-search"></i></button>
-                </form>
+    <section id="header">
+        <div class="container">
+            <div class="main">
+                <h1 class="font-weight-bold mb-4 animate__animated animate__pulse animate__delay-1s">The Hero Your City Needs and Deserves.</h1>
+                <button class="btn btn-block btn-lg btn-red-outline mb-3" onclick="window.location = 'login.php'">Login</button>
+                <button class="btn btn-block btn-lg btn-white" onclick="window.location = 'register.php'">Register</button>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="container item-cards" style="padding-bottom: 100px;">
-        <div class="row">
-            <div class="col-lg-4 text-center">
-                <div class="card" id="latest">
-                    <h2 class="mt-4 mb-4 font-weight-bold text-gold"><i class='fa fa-plus text-warning'></i> LATEST</h2>
-                    <img id="latest-img" src="" class="card-img-top bordered rounded-circle img-fluid mx-auto d-block">
-                    <div class="card-body mb-4">
-                        <h5 class="card-title"><a href='product.php?id=' id="latest-title">Card title</a></h5>
-                    </div>
+    <section id="about">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 about-img">
+                </div>
+                <div class="col-lg-6 py-5 px-5">
+                    <img src="img/logo.png" style="max-height: 75px;">
+                    <p class="mt-2 wow animate__animated animate__fadeIn">trojanZERO is a thermal surveillance-based security system used to prevent city-wide infiltration during times of war and/or invasion. The thermal camera system can detect intruders within the city to keep citizens safe. Positioned throughout
+                        the city, these cameras will be able to pick up the heat signatures of individuals within packages and modes of transportation. To ensure the system is inaccessible by enemies, administrators of the city have to personally invite members of
+                        their security team and give them an invite code to receive alerts. With the Incident Log, members of the city’s security council will be able to keep track of the location and times where they are most susceptible to infiltration.
+                    </p>
                 </div>
             </div>
-            <div class="col-lg-4 text-center">
-                <div class="card" id="trending">
-                    <h2 class="mt-4 mb-4 font-weight-bold text-gold"><i class='fa fa-fire text-danger'></i> TRENDING</i></h2>
-                    <img src="img/user.png" class="card-img-top bordered rounded-circle img-fluid mx-auto d-block" id="trending-img">
-                    <div class="card-body mb-4">
-                        <h5 class="card-title"><a href='product.php?id=' id="trending-title">Card title</a></h5>
+
+        </div>
+    </section>
+
+    <section id="team" class="text-center py-5">
+        <div class="container">
+            <h1 class="font-weight-bold text-white mb-4"><i class="fas fa-users"></i> Our Team</h1>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="team-member mx-auto mb-5 mb-lg-0 wow animate__animated animate__bounceIn">
+                        <img class="img-fluid rounded-circle mb-3" src="img/imesh.jpg" alt="">
+                        <h5>Imesh Nimsitha</h5>
+                        <h6>- CEO -</h6>
+                        <p class="font-weight-light mb-0">Establishing the thermal camera based company in 1177 B.C., he has helped countless towns and civilizations stop intruders from entering and attacking from within.</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 text-center">
-                <div class="card" id="rated">
-                    <h2 class="mt-4 mb-4 font-weight-bold text-gold"><i class='fa fa-check-circle text-success'></i> TOP RATED</h2>
-                    <img src="img/user.png" class="card-img-top bordered rounded-circle img-fluid mx-auto d-block" id="rated-img">
-                    <div class="card-body mb-4">
-                        <h5 class="card-title"><a href='product.php?id=' id="rated-title">Card title</a></h5>
+                <div class="col-lg-3">
+                    <div class="team-member mx-auto mb-5 mb-lg-0 wow animate__animated animate__bounceIn">
+                        <img class="img-fluid rounded-circle mb-3" src="img/yash.jpg" alt="">
+                        <h5>Yash Patel</h5>
+                        <h6>- Manufacturing Manager -</h6>
+                        <p class="font-weight-light mb-0">Being in charge of all manufacturing of the thermal surveillance cameras, his innovative skills in spyware have greatly progressed the functionality of the thermal cameras.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="team-member mx-auto mb-5 mb-lg-0 wow animate__animated animate__bounceIn">
+                        <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
+                        <h5>Arshvir Chaudary</h5>
+                        <h6>- Installation Manager -</h6>
+                        <p class="font-weight-light mb-0">Responsible for all installations of trojanZERO Thermal Camera Systems, he decides on the best ways to implement the thermal surveillance system in each town and city.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="team-member mx-auto mb-5 mb-lg-0 wow animate__animated animate__bounceIn">
+                        <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
+                        <h5>Ronit Ahuja</h5>
+                        <h6>- Director of Finance -</h6>
+                        <p class="font-weight-light mb-0">Managing every financial aspect of the company. he collects all payments and handles future investment to set trojanZERO up for continued future success.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section id="pricing" class="py-5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4">
+                    <div class="card mb-5 mb-lg-0 wow animate__animated animate__fadeInUp">
+                        <div class="card-body">
+                            <h5 class="card-title text-black text-uppercase text-center">Basic</h5>
+                            <h6 class="card-price text-red text-center">$0<span class="period">/month</span></h6>
+                            <hr>
+                            <ul class="fa-ul">
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>5 Entry Thermal Cameras</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Recognition Software</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Advanced Analytics</li>
+                                <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Increased Range</li>
+                                <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Installation Costs</li>
+                            </ul>
+                            <button class="btn btn-block btn-red text-uppercase mb-2">ORDER</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card mb-5 mb-lg-0 wow animate__animated animate__fadeInUp animate__delay-1s">
+                        <div class="card-body">
+                            <h5 class="card-title text-black text-uppercase text-center">Sixth Sense</h5>
+                            <h6 class="card-price text-red text-center">$0<span class="period">/month</span></h6>
+                            <hr>
+                            <ul class="fa-ul">
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>10 Advanced Thermal Cameras</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Recognition Software</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Advanced Analytics</li>
+                                <li><span class="fa-li"><i class="fas fa-times"></i></span>Increased Range</li>
+                                <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Installation Costs</li>
+                            </ul>
+                            <button class="btn btn-block btn-red text-uppercase mb-2">ORDER</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card mb-5 mb-lg-0 wow animate__animated animate__fadeInUp animate__delay-2s">
+                        <div class="card-body">
+                            <h5 class="card-title text-black text-uppercase text-center">City Coverage</h5>
+                            <h6 class="card-price text-red text-center">$0<span class="period">/month</span></h6>
+                            <hr>
+                            <ul class="fa-ul">
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>20 Pro Thermal Cameras</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Recognition Software</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Advanced Analytics</li>
+                                <li><span class="fa-li"><i class="fas fa-times"></i></span>Increased Range</li>
+                                <li><span class="fa-li"><i class="fas fa-times"></i></span>Free Installation Costs</li>
+                            </ul>
+                            <button class="btn btn-block btn-red text-uppercase mb-2">ORDER</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Insert FOOTER template -->
     <?php
@@ -213,6 +170,10 @@ else {
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 
     <script src="js/index.js"></script>
 

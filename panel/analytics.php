@@ -9,8 +9,8 @@
     <!-- Core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <link rel="stylesheet" href="../css/core.css">
     <link rel="stylesheet" href="css/panel.css">
+    <link rel="stylesheet" href="../css/core.css">
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
@@ -23,7 +23,7 @@
     <script src="../js/authentication.js"></script>
 
     <!-- Individual CSS and JS -->
-    <link rel="stylesheet" href="css/analytics.css">
+
 
 </head>
 
@@ -39,170 +39,71 @@ readfile("../nav.html");
     readfile("sidebar.html");
     ?>
     <div class="page-content">
-        <!-- Breadcrumb-->
-        <div class="container-fluid">
-            <ul class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                <li class="breadcrumb-item active">Analytics</li>
-            </ul>
-        </div>
-        <section class="no-padding-top">
+        <section>
             <div class="container-fluid">
                 <div class="row">
+                    <div class="col-lg-8">
+                        <div class="line-chart block chart">
+                            <div class="title"><strong><i class="fas fa-bell"></i> Detections (Current Year)</strong></div>
+                            <canvas id="lineChartCustom1"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="lin-chart block chart">
+                            <div class="title"><strong><i class="far fa-hand-pointer"></i> User Data</strong></div>
+                            <div class="line-chart chart margin-bottom-sm">
+                                <canvas id="lineChartCustom3"></canvas>
+                            </div>
+                            <div class="bar-chart chart">
+                                <canvas id="barChartCustom2"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="pie-chart chart block">
+                            <div class="title"><strong><i class="fas fa-camera"></i> Camera Usage</strong></div>
+                            <div class="pie-chart chart margin-bottom-sm">
+                                <canvas id="pieChartCustom1"></canvas>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-lg-6">
                         <div class="block margin-bottom-sm">
-                            <div class="title"><strong>Basic Table</strong></div>
+                            <div class="title"><strong><i class="fas fa-history"></i> Incident Logs</strong></div>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>First Name</th>
-                                        <th>Last Name</th>
-                                        <th>Username</th>
+                                        <th>Incident</th>
+                                        <th>Date</th>
+                                        <th>Resolved</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td>Unverified threat</td>
+                                        <td>3 days ago</td>
+                                        <td>Yes</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
+                                        <td>Infiltration</td>
+                                        <td>1 month ago</td>
+                                        <td>Yes</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>@twitter</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="block margin-bottom-sm">
-                            <div class="title"><strong>Striped Table</strong></div>
-                            <div class="table-responsive">
-                                <table class="table table-striped">
-                                    <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>First Name</th>
-                                        <th>Last Name</th>
-                                        <th>Username</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>@twitter  </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="block">
-                            <div class="title"><strong>Striped table with hover effect</strong></div>
-                            <div class="table-responsive">
-                                <table class="table table-striped table-hover">
-                                    <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>First Name</th>
-                                        <th>Last Name</th>
-                                        <th>Username</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>@twitter       </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="block">
-                            <div class="title"><strong>Compact Table</strong></div>
-                            <div class="table-responsive">
-                                <table class="table table-striped table-sm">
-                                    <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>First Name</th>
-                                        <th>Last Name</th>
-                                        <th>Username</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>@twitter      </td>
+                                        <td>Multiple detections</td>
+                                        <td>2 years ago</td>
+                                        <td>Yes</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">4</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">5</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
+                                        <td>Unverified threat</td>
+                                        <td>2 years ago</td>
+                                        <td>Yes</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -222,6 +123,9 @@ readfile("../nav.html");
 <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
 <script src="vendor/chart.js/Chart.min.js"></script>
 <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+
+<!-- Individual JS -->
+<script src="js/analytics.js"></script>
 
 
 </body>

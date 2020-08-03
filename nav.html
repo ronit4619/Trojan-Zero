@@ -9,7 +9,7 @@
     <!-- ELEMENT: Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark ">
         <!-- Brand name -->
-        <a class="navbar-brand mr-auto" href="index.php"><img id="nav-logo" src="img/logo.png" class="img-responsive"></a>
+        <a id="navBrandLogo" class="navbar-brand mr-auto" href="index.php"><img id="nav-logo" class="img-responsive"></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -17,21 +17,21 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <!-- Link: Home -->
+
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php">Home</a>
+                    <a id="navHome" class="nav-link" href="index.php">Home</a>
                 </li>
-                <!-- Link: Browse -->
+
                 <li class="nav-item">
-                    <a class="nav-link" href="panel/">Panel</a>
+                    <a id="navAbout" class="nav-link" href="index.php#about">About</a>
                 </li>
-                <!-- Link: Sell -->
+
                 <li class="nav-item">
-                    <a class="nav-link" href="sell.php">Sell</a>
+                    <a id="navTeam" class="nav-link" href="index.php#team">Team</a>
                 </li>
-                <!-- Link: Company -->
+
                 <li class="nav-item">
-                    <a class="nav-link" href="">Company</a>
+                    <a id="navPricing" class="nav-link" href="index.php#pricing">Pricing</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -57,9 +57,19 @@
 <script>
     let navpath = window.location.pathname;
     if(navpath.includes("panel")){
+        document.getElementById("navBrandLogo").href = "../index.php";
         document.getElementById("nav-logo").src = "../img/logo.png";
+
+        document.getElementById("navHome").href = "../index.php";
+        document.getElementById("navAbout").href = "../index.php#about";
+        document.getElementById("navTeam").href = "../index.php#team";
+        document.getElementById("navPricing").href = "../index.php#pricing";
+
         document.getElementById("dropdown-panel").href = "../panel/";
         document.getElementById("dropdown-myaccount").href = "../panel/account.php";
+    }
+    else {
+        document.getElementById("nav-logo").src = "img/logo.png";
     }
 
 </script>

@@ -43,11 +43,11 @@ readfile("../nav.html");
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="block">
-                            <div class="title"><strong>Invite code</strong></div>
+                            <div class="title"><strong><i class="fas fa-link"></i> Invite code</strong></div>
                             <p>Provide this code to invite a user to your panel. They must input this code when registering.</p>
                             <div class="form-inline">
                                 <div class="form-group">
-                                    <input id="invite-code" type="text" value="" class="form-control mr-sm-3 custom-select-lg"readonly>
+                                    <input id="invite-code" type="text" value="jZoZdFw5uRU5ThZD10V1DMcDWTD3" class="form-control mr-sm-3 custom-select-lg"readonly>
                                 </div>
                                 <div class="form-group">
                                     <input type="submit" value="Copy" class="btn btn-block btn-red btn-lg" onclick="copyInvite();">
@@ -57,8 +57,8 @@ readfile("../nav.html");
                     </div>
                     <div class="col-lg-12">
                         <div class="block">
-                            <div class="title"><strong>Invited users</strong></div>
-                            <p id="no-invites">Looks like you have not invited any users! Invite them by providing the code above.</p>
+                            <div class="title"><strong><i class="fas fa-users-cog"></i> Manage users</strong></div>
+                            <!--<p id="no-invites">Looks like you have not invited any users! Invite them by providing the code above.</p>-->
                             <div class="table-responsive">
                                 <table id="t-users" class="table table-striped">
                                     <thead>

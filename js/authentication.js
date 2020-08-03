@@ -1,28 +1,34 @@
-function register(){
+function register() {
+    let invite_code = document.getElementById("formInvite").value;
     let username = document.getElementById("formUsername").value;
     let email = document.getElementById("formEmail").value;
     let password = document.getElementById("formPassword").value;
     let passwordConfirm = document.getElementById("formPassword_confirm").value;
 
-    if(password == passwordConfirm){
-        auth.createUserWithEmailAndPassword(email, password)
-            .then(function(){
-                let user = {
-                    uid: auth.currentUser.uid,
-                    username: username,
-                    email: email,
-                    admin: false,
-                    invited_users: ["jZoZdFw5uRU5ThZD10V1DMcDWTD3"]
-                }
-                writeNewUserData(user);
-                window.location = "panel/";
-            })
-            .catch(function(error){
-                alert(error.message);
-            });
+    if(invite_code == "jZoZdFw5uRU5ThZD10V1DMcDWTD3"){
+        if (password == passwordConfirm) {
+            auth.createUserWithEmailAndPassword(email, password)
+                .then(function () {
+                    let user = {
+                        uid: auth.currentUser.uid,
+                        username: username,
+                        email: email,
+                        admin: false,
+                    }
+                    writeNewUserData(user);
+                    window.location = "panel/";
+                })
+                .catch(function (error) {
+                    alert(error.message);
+                });
+
+        }
+        else {
+            errorAlert("The passwords did not match.");
+        }
     }
     else {
-        errorAlert("The passwords did not match.");
+        errorAlert("The invite code is invalid.");
     }
 }
 
@@ -52,6 +58,17 @@ auth.onAuthStateChanged(function(user){
         if (window.location.pathname == "/trojan-zero/login.php") {
             window.location = "panel/";
         }
+
+        if(window.location.pathname.includes("panel")){
+            db.ref('group').once('value')
+                .then(function (snapshot) {
+                    let invited_users = snapshot.val();
+                    if(!invited_users.includes(user.uid)){
+                        logout();
+                    }
+                });
+        }
+
     }
 
     // Not logged in
@@ -67,5 +84,18 @@ function writeNewUserData(user){
     db.ref('users/' + user.uid).set(user).catch(error => {
         console.log(error.message);
     });
+    db.ref('group').once('value')
+        .then(function (snapshot) {
+            let invited_users = snapshot.val();
+            invited_users.push(user.uid);
+
+            db.ref('group').set(invited_users)
+                .catch(function(error){
+                    alert(error.message);
+                });
+        })
+        .catch(function(err){
+            errorAlert(err.message);
+        });
     console.log("Created new user data for UID: " + user.uid);
 }
