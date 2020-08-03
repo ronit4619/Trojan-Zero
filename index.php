@@ -113,6 +113,7 @@
                             <ul class="fa-ul">
                                 <li><span class="fa-li"><i class="fas fa-check"></i></span>5 Entry Thermal Cameras</li>
                                 <li><span class="fa-li"><i class="fas fa-check"></i></span>Recognition Software</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Advanced Analytics</li>
                                 <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Increased Range</li>
                                 <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Installation Costs</li>
                             </ul>
@@ -130,6 +131,7 @@
                             <ul class="fa-ul">
                                 <li><span class="fa-li"><i class="fas fa-check"></i></span>10 Advanced Thermal Cameras</li>
                                 <li><span class="fa-li"><i class="fas fa-check"></i></span>Recognition Software</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Advanced Analytics</li>
                                 <li><span class="fa-li"><i class="fas fa-times"></i></span>Increased Range</li>
                                 <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Installation Costs</li>
                             </ul>
@@ -147,6 +149,7 @@
                             <ul class="fa-ul">
                                 <li><span class="fa-li"><i class="fas fa-check"></i></span>20 Pro Thermal Cameras</li>
                                 <li><span class="fa-li"><i class="fas fa-check"></i></span>Recognition Software</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Advanced Analytics</li>
                                 <li><span class="fa-li"><i class="fas fa-times"></i></span>Increased Range</li>
                                 <li><span class="fa-li"><i class="fas fa-times"></i></span>Free Installation Costs</li>
                             </ul>
